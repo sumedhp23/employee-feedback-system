@@ -2,11 +2,21 @@ from django.db import models
 
 class EmployeeFeedback(models.Model):
 
+    DEPARTMENT_CHOICES = [
+        ('IT', 'IT'),
+        ('FIN', 'Finance'),
+        ('HR', 'Human Resources'),
+        ('PM', 'Project Management'),
+    ]
+
     employee_name = models.CharField(max_length=150)
 
     employee_id = models.CharField(max_length=20, unique=True)
 
-    department = models.CharField(max_length=100)
+    department = models.CharField(
+        max_length=10,
+        choices=DEPARTMENT_CHOICES
+    )
 
     email = models.EmailField()
 

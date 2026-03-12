@@ -10,7 +10,7 @@ class EmployeeFeedbackForm(forms.ModelForm):
         widgets = {
             'employee_name': forms.TextInput(attrs={'class':'form-control'}),
             'employee_id': forms.TextInput(attrs={'class':'form-control'}),
-            'department': forms.TextInput(attrs={'class':'form-control'}),
+            'department': forms.Select(attrs={'class':'form-control'}),
             'email': forms.EmailInput(attrs={'class':'form-control'}),
             'phone': forms.TextInput(attrs={'class':'form-control'}),
             'joining_date': forms.DateInput(attrs={'class':'form-control','type':'date'}),
