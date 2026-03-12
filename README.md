@@ -74,31 +74,31 @@ employee-feedback-system
 │
 ├── employee_project/
 │   │
-│   ├── employee_project/        # Django project configuration
-│   │     ├── settings.py
-│   │     ├── urls.py
-│   │     ├── asgi.py
-│   │     └── wsgi.py
+│   ├── employee_project/              # Django project configuration
+│   │   ├── __init__.py
+│   │   ├── settings.py
+│   │   ├── urls.py
+│   │   ├── asgi.py
+│   │   └── wsgi.py
 │   │
-│   ├── employees/               # Django application
-│   │     ├── migrations/
-│   │     ├── templates/
-│   │     │     └── employees/
-│   │     │           ├── employee_form.html
-│   │     │           └── success.html
-│   │     │
-│   │     ├── models.py
-│   │     ├── views.py
-│   │     ├── forms.py
-│   │     ├── urls.py
-│   │     ├── admin.py
-│   │     └── apps.py
+│   ├── employees/                     # Employee app
+│   │   ├── migrations/
+│   │   ├── templates/
+│   │   │       ├── employee_form.html
+│   │   │       └── success.html
+│   │   ├── admin.py
+│   │   ├── apps.py
+│   │   ├── forms.py
+│   │   ├── models.py
+│   │   ├── urls.py
+│   │   └── views.py
 │   │
 │   └── manage.py
 │
-├── requirements.txt
+├── .env.example                       # Example environment variables
+├── .gitignore
 ├── README.md
-└── .gitignore
+└── requirements.txt
 ```
 
 ---
@@ -216,6 +216,20 @@ It stores:
 * Experience
 * Feedback
 * Recommendations
+
+---
+
+## Environment Variables
+
+Create a `.env` file in the project root using `.env.example` and add your SQL Server credentials.
+
+Example:
+
+DB_NAME=employee_db
+DB_USER=SA
+DB_PASSWORD=your_password
+DB_HOST=127.0.0.1
+DB_PORT=1433
 
 ---
 
