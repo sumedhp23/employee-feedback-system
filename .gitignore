@@ -1,6 +1,10 @@
 venv/
-__pycache__/
+**pycache**/
 *.pyc
-.DS_Store
-db.sqlite3
+*.pyo
+*.pyd
+*.sqlite3
 .env
+.DS_Store
+.vscode/
+node_modules/
