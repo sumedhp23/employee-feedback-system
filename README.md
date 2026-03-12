@@ -233,6 +233,17 @@ DB_PORT=1433
 
 ---
 
+## Validation Logic
+
+Server-side validation ensures data quality before saving records:
+
+* Employee ID must start with **EMP**
+* Phone number must contain **exactly 10 digits**
+* Joining date cannot be in the future
+* Experience must be a positive number
+* Email must follow valid email format
+
+---
 ## Future Improvements
 
 Potential enhancements for this system:
